@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class LCMGCDCalculator {
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    public static int lcm(int a, int b) {
+        return Math.abs(a * b) / gcd(a, b);
+    }
+    public static int findGCD(int[] numbers) {
+        int result = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            result = gcd(result, numbers[i]);
+        }
+        return result;
+    }
+    public static int findLCM(int[] numbers) {
+        int result = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            result = lcm(result, numbers[i]);
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("N value = ");
+        int n = scanner.nextInt();
+        int[] numbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Number " + (i + 1) + " = ");
+            numbers[i] = scanner.nextInt();
+        }
+        int gcd = findGCD(numbers);
+        int lcm = findLCM(numbers);
+        
+        System.out.println("LCM = " + lcm);
+        System.out.println("GCD = " + gcd);
+        scanner.close();
+    }
+}
