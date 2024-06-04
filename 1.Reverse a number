@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ReverseString {
+    public static String reverseString(String word) {
+        char[] charArray = word.toCharArray();
+        int length = word.length();
+        char[] reversedArray = new char[length];
+        for (int i = 0; i < length; i++) {
+            reversedArray[i] = charArray[length - 1 - i];
+        }
+        return new String(reversedArray);
+    }
+    public static void main(String[] args) {
+        String inputString = "TEMPLE";
+        String reversedString = reverseString(inputString);
+        System.out.println("Reverse String: " + reversedString);
+    }
+}
