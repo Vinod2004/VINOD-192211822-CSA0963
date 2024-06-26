@@ -1,0 +1,18 @@
+public class AgeCalculator {
+    public static void main(String[] args) {
+        int olderBrotherAgeWhenYoungerIs24 = 28;
+        int youngerBrotherAgeWhenOlderIs28 = 24;
+        int ageDifference = olderBrotherAgeWhenYoungerIs24 - youngerBrotherAgeWhenOlderIs28;
+        int olderBrotherFutureAge = 56;
+        int youngerBrotherFutureAge = olderBrotherFutureAge - ageDifference;
+        System.out.println("When the older brother is " + olderBrotherFutureAge + ", the younger brother will be " + youngerBrotherFutureAge + " years old.");
+        if (ageDifference > 3) {
+            int olderBrotherAgeInPast = 5;
+            int youngerBrotherAgeInPast = olderBrotherAgeInPast - ageDifference;
+            System.out.println("The age difference is more than 3.");
+            System.out.println("When the older brother was " + olderBrotherAgeInPast + ", the younger brother was " + youngerBrotherAgeInPast + " years old.");
+        } else {
+            System.out.println("The age difference is not more than 3.");
+        }
+    }
+}
