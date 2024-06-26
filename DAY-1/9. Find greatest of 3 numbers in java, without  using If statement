@@ -1,0 +1,9 @@
+public class GreatestOfThree {
+    public static void main(String[] args) {
+        int num1 = 15;
+        int num2 = 42;
+        int num3 = 27;
+        int greatest = Math.max(num1, Math.max(num2, num3));
+        System.out.println("The greatest of the three numbers is: " + greatest);
+    }
+}
